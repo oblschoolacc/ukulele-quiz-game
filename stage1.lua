@@ -23,6 +23,7 @@ function Stage1:update(dt)
   local dx, dy = Player.pos.x - self.camera.x, Player.pos.y - self.camera.y
   self.camera:move(dx/2, dy/2)
   self.camera.smooth.linear(0.8)
+  self.map:update()
 end
 
 function Stage1:draw()
